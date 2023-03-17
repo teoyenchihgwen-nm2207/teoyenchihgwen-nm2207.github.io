@@ -1,16 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>My NM2207 GitHub Portfolio</title>
-    <script src="scripts/counter.js"></script>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <h1>Gwen's GitHub 😀 </h1>
-    <h2>This is a site hosted on GitHub Pages.</h2>
-    <h3>Here's a hungry mouse. Please feed him!</h3>
-    <h3 class="mouse">🐁</h3>
-    <h3>Food counter: <span class="counter">0</span> 🥙</h3>
-    <button>Feed!</button>
-  </body>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Gwen's Final Project</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Steller main styles -->
+	<link rel="stylesheet" href="assets/css/steller.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/imgs/gender-equality.png" alt=""></a> <!-- will make my own logo -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#data">Dataset</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#occ">Occupation Segregation</a>
+                    </li>                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mother">Motherhood Penalty</a>
+                    </li>
+                </ul>
+            </div>
+        </div>          
+    </nav>
+    <!-- End of page navibation -->
+
+    <!-- Page Header -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="infos">
+
+                <h6 class="title">The Gender Wage Gap</h6>
+              
+            </div>              
+            <div class="img-holder">
+                <img src="assets/imgs/Gender_Equality.jpeg" alt="">
+            </div>      
+        </div>  
+        
+        </div>
+    </header>
+    <!-- End of Page Header -->
+    
+    <!-- About section -->
+    <section id="about" class="section mt-3">
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3">
+                    <img src="assets/imgs/genderinequal.jpeg" alt="" class="img-thumbnail mb-4">
+                </div>
+
+                <div class="pl-md-4 col-md-9">
+                    <h4 class="title"> Women earn 82¢ for every dollar earned by men. </h4>
+                    <p> In 2022, according to <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">Pew Research Center's analysis</a>  of median hourly earnings of both full- and part-time workers, 
+                        women earned an average of 82% of what men earned. Despite the progress that women have made over the years, the gender wage gap has remained a persistent inequity in the United States
+                        over the past 20 years, increasing only by 2% since 2000. The consequences of this gap affects women throughout their lives. </p>
+                    <p> There are a multitude of  factors that contribute to the disparity in wages between men and women: age, educational attainment, race
+                        presence of children and the types of jobs that men and women segregate to (occupational segregation). The unmeasurable or unquanitfiable part of the gender pay gap
+                        is often said to be a result of gender discrimination. 
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research section -->
+
+    <section id="data" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle"> </h6>
+            <h6 class="section-title mb-4">Research & Data</h6>
+            <p class="mb-5 pb-4"> Description of datasets <br> Differences in median income of men and women.</p>
+            <button class="btn btn-primary rounded mt-3" id="general">General</button> 
+            <button class="btn btn-primary rounded mt-3" id="edu">Education</button>
+            <button class="btn btn-primary rounded mt-3" id="race">Race</button>
+        </div>
+        <br>
+        <div id="chart-container" style="padding-left: 350px; height:50vh; width: 75vw;">
+            <canvas id="generalchart"></canvas>
+
+        </div>
+        </div>
+        <div id="chart-container" style="padding-left: 350px; height:50vh; width: 75vw;">
+            <canvas id="educhart"></canvas>
+        </div>
+        <div id="chart-container" style="padding-left: 350px; height:50vh; width: 75vw;">
+            <canvas id="racechart"></canvas>
+        </div>
+    </section>
+
+    <!-- End of Data Section -->
+
+ <!-- Occupational Segregation section -->
+      
+    <section id="occ" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Research Insights </h6>
+            <h6 class="section-title mb-4">Occupational Segregation</h6>
+            <p class="mb-5 pb-4"> An explanation for the gender wage gap is: <br> Differences in median income of men and women.</p>
+        
+        </div>
+        <br>
+        <div id="chart-container" style="padding-left: 100px; height:50vh; width: 90vw;">
+            <canvas id="occuseg"></canvas>
+        </div>
+    </section>
+<!-- End of OS section -->  
+
+   
+<!-- Penalty section -->
+<section id="mother" class="section">
+    <div class="container text-center">
+        <h6 class="subtitle">Research Insights </h6>
+        <h6 class="section-title mb-4">Motherhood Penalty</h6>
+        <p class="mb-5 pb-4"> An explanation for the gender wage gap is: <br> Differences in median income of men and women.</p>
+    
+    </div>
+    <br>
+    <div id="chart-container" style="padding-left: 650px; height:60vh; width: 70vw;">
+        <canvas id="penalty"></canvas>
+    </div>
+</section>
+<!--End of penalty section-->
+
+
+<!--Conclusion-->
+    <section id="intro" class="section mt-3">
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3">
+                    <img src="assets/imgs/genderinequal.jpeg" alt="" class="img-thumbnail mb-4">
+                </div>
+
+                <div class="pl-md-4 col-md-9">
+                    <h4 class="title"> Conclusion </h4>
+                    <p> Summary
+                    </p>
+                    <h4> References </h4>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <!--<section id="contact" class="position-relative section">
+        <div class="container text-center">
+            <h6 class="subtitle">Contact</h6>
+            <h6 class="section-title mb-4">Get In Touch With Me</h6>
+            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+
+            <div class="contact text-left">
+                <div class="form">
+                    <h6 class="subtitle">Available 24/7</h6>
+                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-infos">
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>(123) 456-7890</p>
+                        </div>                          
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>info@website.com</p>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>  
+            
+    </section>-->
+    <!-- End of Contact Section -->
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <!--<div class="socials">
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
+                        <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </footer> 
+    <!-- End of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- steller js -->
+    <script src="assets/js/steller.js"></script>
+    <!-- main js-->
+    <script src="main.js"></script>
+</body>
 </html>
