@@ -41,7 +41,7 @@
             </div>
         </div>          
     </nav>
-    <!-- End of page navibation -->
+    <!-- End of page navigation -->
 
     <!-- Page Header -->
     <header class="header" id="home">
@@ -73,7 +73,7 @@
                     <p> In 2022, according to <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">Pew Research Center's analysis</a>  of median hourly earnings of both full- and part-time workers, 
                         women earned an average of 82% of what men earned. Despite the progress that women have made over the years, the gender wage gap has remained a persistent inequity in the United States
                         over the past 20 years, increasing only by 2% since 2000. The consequences of this gap affects women throughout their lives. </p>
-                    <p> There are a multitude of  factors that contribute to the disparity in wages between men and women: age, educational attainment, race
+                    <p> There are a multitude of  factors that contribute to the disparity in wages between men and women: age, educational attainment, race,
                         presence of children and the types of jobs that men and women segregate to (occupational segregation). The unmeasurable or unquanitfiable part of the gender pay gap
                         is often said to be a result of gender discrimination. 
                     </p>
@@ -90,21 +90,21 @@
             <h6 class="subtitle"> </h6>
             <h6 class="section-title mb-4">Research & Data</h6>
             <p class="mb-5 pb-4"> Description of datasets <br> Differences in median income of men and women.</p>
-            <button class="btn btn-primary rounded mt-3" id="general">General</button> 
-            <button class="btn btn-primary rounded mt-3" id="edu">Education</button>
-            <button class="btn btn-primary rounded mt-3" id="race">Race</button>
+            <div>
+               
+                    <button class="btn btn-primary rounded mt-3" id="generalButton">General</button>
+                    <button class="btn btn-primary rounded mt-3" id="eduButton">Education</button>
+                    <button class="btn btn-primary rounded mt-3" id="raceButton">Race</button>
+
+            </div>
         </div>
         <br>
         <div id="chart-container" style="padding-left: 350px; height:50vh; width: 75vw;">
-            <canvas id="generalchart"></canvas>
-
-        </div>
-        </div>
-        <div id="chart-container" style="padding-left: 350px; height:50vh; width: 75vw;">
-            <canvas id="educhart"></canvas>
-        </div>
-        <div id="chart-container" style="padding-left: 350px; height:50vh; width: 75vw;">
-            <canvas id="racechart"></canvas>
+            <canvas id="generalchart" style="display: none;"></canvas>
+            
+            <p> Women are generally earning lesser than men. </p>
+            <canvas id="educhart" style="display: none;"></canvas>
+            <canvas id="racechart" style="display: none;""></canvas>
         </div>
     </section>
 
@@ -164,16 +164,15 @@
 
 
     <!-- Contact Section -->
-    <!--<section id="contact" class="position-relative section">
+    <section id="contact" class="position-relative section">
         <div class="container text-center">
-            <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+            <h6 class="section-title mb-4">Leave me feedback!</h6>
+            <p class="mb-5 pb-4">I would love to hear your thoughts on my data story or any thoughts you might have on the topic itself.
+                <br> Feel free to leave me feedback on my data visualisation too! </p>
 
             <div class="contact text-left">
                 <div class="form">
-                    <h6 class="subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <h6 class="section-title mb-4">Feedback & Thoughts: </h6>
                     <form>
                         <div class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -185,25 +184,19 @@
                     </form>
                 </div>
                 <div class="contact-infos">
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p>(123) 456-7890</p>
-                        </div>                          
-                    </div>
+                
                     <div class="item">
                         <i class="ti-email"></i>
                         <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p>info@website.com</p>
+                            <h5>Contact me</h5>
+                            <p>gwenteoy.c@gmail.com</p>
                         </div>
                     </div>
                 </div>                  
             </div>
         </div>  
             
-    </section>-->
+    </section>
     <!-- End of Contact Section -->
 
     <!-- Page Footer -->
@@ -214,12 +207,11 @@
                     <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
                 </div>
                 <div class="col-sm-6">
-			<a href="https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/7208e7a06f26d7d8bc6340f4536ee6ade71a57ce/NM2207%20Week%209%20Submission.docx"> Week 9 Diary Entry <a>
-				<br>
-			<a href="https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/7208e7a06f26d7d8bc6340f4536ee6ade71a57ce/NM2207%20Week%2010%20submission.docx">  Week 10 Diary Entry <a>
-                    		<br>
-			<a href= "https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/6336cc1c7404bcdc2dea4c59b3331072541002b4/Week%2011%20Diary%20Entry.docx"> Week 11 Diary Entry </a> 
-				<!--<div class="socials">
+                    <a href="https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/7208e7a06f26d7d8bc6340f4536ee6ade71a57ce/NM2207%20Week%209%20Submission.docx"> Week 9 Diary Entry <a>
+                        <br>
+			<a href="https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/7208e7a06f26d7d8bc6340f4536ee6ade71a57ce/NM2207%20Week%2010%20submission.docx">  Week 10 Diary Entry <a> <br>
+                <a href= "https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/6336cc1c7404bcdc2dea4c59b3331072541002b4/Week%2011%20Diary%20Entry.docx"> Week 11 Diary Entry </a> 
+                    <!--<div class="socials">
                         <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
                         <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
                         <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
