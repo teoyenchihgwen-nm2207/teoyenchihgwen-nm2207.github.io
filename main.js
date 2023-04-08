@@ -108,16 +108,16 @@ const data = fetch("https://raw.githubusercontent.com/teoyenchihgwen-nm2207/teoy
         labels: yearedu,
         datasets: [
             {
-               label:"Women's Median Income",// uncomment this line and set this to "Words"
-                data: womenedu,// uncomment this line and set this to negData
+               label:"Women's Median Income",
+                data: womenedu,
                 borderWidth: 2,
                 fill: false,
                 backgroundColor: "rgb(255, 153, 153)",
                 borderColor: "rgb(255, 153, 153)",
             },
             {
-              label:"Men's Median Income",// uncomment this line and set this to "Words"
-              data: menedu,// uncomment this line and set this to negData
+              label:"Men's Median Income",
+              data: menedu,
                borderWidth: 2,
                fill: false,
                backgroundColor: "rgb(51, 173, 255)",
@@ -421,4 +421,39 @@ const indiv = ["With children under 18years", "With children under 6 years"]
       }); 
 
 
+     //generate buttons to toggle display
+      var charts = []; // array to store chart elements
+      var currentChart = 0; // index of currently displayed chart
+
+       // populate the charts array with the chart elements
+        var chartElems = document.querySelectorAll("#generalchart, #educhart, #racechart");
+        chartElems.forEach(function(elem) {
+            charts.push(elem);
+        });
+
+        //clicks
+        document.getElementById("generalButton").addEventListener("click", function() {
+            showChart(0);
+          });
+          document.getElementById("eduButton").addEventListener("click", function() {
+            showChart(1);
+          });
+          document.getElementById("raceButton").addEventListener("click", function() {
+            showChart(2);
+          });
+
+          // show the generalChart by default when the page loads
+            charts[currentChart].style.display = "block";
+
+        //hide & show certain charts only
+        function showChart(index) {
+            // hide the currently displayed chart
+            charts[currentChart].style.display = "none";
+            
+            // update the currentChart index to point to the new chart
+            currentChart = index;
+            
+            // show the new currently displayed chart
+            charts[currentChart].style.display = "block";
+          }
 
