@@ -556,6 +556,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  
 }
 
 @media (min-width: 576px) {
@@ -2739,7 +2741,10 @@ textarea.form-control {
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.button{
+padding-bottom: 20px;
 
+}
 @media (prefers-reduced-motion: reduce) {
   .btn {
     -webkit-transition: none;
@@ -5381,7 +5386,7 @@ input[type="button"].btn-block {
 
 .page-link:hover {
   z-index: 2;
-  color: #ff3d0b;
+  color: #ff7a57;
   text-decoration: none;
   background-color: #eaf0fc;
   border-color: #dee2e6;
@@ -5390,7 +5395,7 @@ input[type="button"].btn-block {
 .page-link:focus {
   z-index: 2;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(255, 122, 87, 0.25);
+  box-shadow: 0 0 0 0.2rem #ff7a57;
 }
 
 .page-item:first-child .page-link {
@@ -5503,7 +5508,7 @@ a.badge-primary:hover, a.badge-primary:focus {
 
 a.badge-primary:focus, a.badge-primary.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(255, 122, 87, 0.5);
+  box-shadow: 0 0 0 0.2rem #ff7a57;
 }
 
 .badge-secondary {
@@ -8973,7 +8978,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 0px !important;
 }
 
 .ml-5,
@@ -9093,7 +9098,7 @@ button.bg-dark:focus {
 
 .pb-4,
 .py-4 {
-  padding-bottom: 1.5rem !important;
+  padding-bottom: 1px !important;
 }
 
 .pl-4,
@@ -10682,6 +10687,7 @@ button.bg-dark:focus {
 .text-center {
   text-align: center !important;
   align-items: center;
+  max-height: fit-content;
 }
 
 @media (min-width: 576px) {
@@ -11634,6 +11640,7 @@ pre {
 .section {
   position: relative;
   padding: 5rem 0;
+  height: 100%;
 }
 
 .section:nth-child(even) {
@@ -11648,6 +11655,26 @@ pre {
   background: white;
 }
 
+.chart-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  
+}
+.piecharts{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+
+}
 
 
 
