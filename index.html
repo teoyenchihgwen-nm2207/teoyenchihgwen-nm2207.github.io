@@ -18,7 +18,7 @@
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/imgs/gender-equality.png" alt=""></a> <!-- will make my own logo -->
+            <a class="navbar-brand" href="#"><img src="assets/imgs/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,7 +29,10 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#data">Dataset</a>
+                        <a class="nav-link" href="#edu">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#race">Race</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#occ">Occupation Segregation</a>
@@ -74,7 +77,7 @@
                         women earned an average of 82% of what men earned. Despite the progress that women have made over the years, the gender wage gap has remained a persistent inequity in the United States
                         over the past 20 years, increasing only by 2% since 2000. The consequences of this gap affects women throughout their lives. </p>
                     <p> There are a multitude of  factors that contribute to the disparity in wages between men and women: age, educational attainment, race,
-                        presence of children and the types of jobs that men and women segregate to (occupational segregation). The unmeasurable or unquanitfiable part of the gender pay gap
+                        presence of children and the types of jobs that men and women segregate to. The unmeasurable or unquanitfiable part of the gender pay gap
                         is often said to be a result of gender discrimination. 
                     </p>
                 </div>
@@ -83,46 +86,135 @@
         </div>
     </section>
 
-    <!-- Research section -->
+    <!-- education section -->
 
-    <section id="data" class="section">
+    <section id="edu" class="section">
         <div class="container text-center">
-            <h6 class="subtitle"> </h6>
-            <h6 class="section-title mb-4">Research & Data</h6>
-            <p class="mb-5 pb-4"> Description of datasets <br> Differences in median income of men and women.</p>
+            <h6 class="section-title mb-4">Education</h6>
+            <p class="mb-5 pb-4" style="text-align:left"> 
+            Extracting data from <a href="https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-people.html">
+            Historical Income Tables of Census Data </a> from the United States Census Bureau, we aim to provide a rough overview of the 
+            factors that can affect the gender wage gap. </p>
+            <!--Buttons to toggle between charts-->
             <div>
-               
-                    <button class="btn btn-primary rounded mt-3" id="generalButton">General</button>
-                    <button class="btn btn-primary rounded mt-3" id="eduButton">Education</button>
-                    <button class="btn btn-primary rounded mt-3" id="raceButton">Race</button>
-
+                <button class="btn btn-primary rounded mt-3" id="generalButton">General</button>
+                <button class="btn btn-primary rounded mt-3" id="eduButton">Education</button>
             </div>
+            <div id = "general" class="chart-container">
+                <canvas id="generalchart" style="display: none;"></canvas>
+               <canvas id="educhart" style="display: none;"></canvas>
+               <br>
+            </div>
+
+            <div id="generaltext" style="text-align:left"> 
+            
+                Observing the median income of men and women based on 2020 averages (Table P-2), 
+                we provide a general view of the disparities in incomes between the genders. 
+                We observe that men reportedly have a higher median income than women and this gap 
+                between men and women’s income have remained relatively the same over the past 
+                20 years (2000 - 2021). </div>
+                
+
+            <div id="edutext" style="text-align:left; display: none;"> 
+                Educational attainment is an important factor that affects an individual’s wage. 
+                Studies have consistently shown that higher levels of education are associated with higher earnings, 
+                and this is true for both men and women.
+                <br>
+                <br>
+                Women have made leaps and bounds in educational progress, yet we still observe that 
+                women earn significantly less than men. In the graph above, we compare the median income 
+                of men and women who have attained Bachelor Degrees or higher (Table P-16). 
+                Although women with higher education earn more compared to the average population of 
+                women, women’s earnings are still trailing those of men. Although gains in education have 
+                raised the average earnings of women and have narrowed the gender pay gap overall, 
+                college-educated women are no closer to wage parity with their male counterparts than 
+                other women <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">
+                (Kochhar, 2023).</a></div>
+            <br>
+            <br>
         </div>
         <br>
-        <div id="chart-container" style="padding-left: 350px; height:50vh; width: 75vw;">
-            <canvas id="generalchart" style="display: none;"></canvas>
-            
-            <p> Women are generally earning lesser than men. </p>
-            <canvas id="educhart" style="display: none;"></canvas>
-            <canvas id="racechart" style="display: none;""></canvas>
-        </div>
+       
     </section>
 
     <!-- End of Data Section -->
+    <!--Race-->
+    <section id="race" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle"> Factors </h6>
+            <h6 class="section-title mb-4">Race</h6>
+
+            <div id="raceChart" class="chart-container"></div>
+            <p style ='text-align: left;'>
+            <br>
+            Addressing the intersection of race and gender is critical for reducing the wage gap. 
+            Studies have consistently shown that women of color face a persistently larger wage gap 
+            compared to white women. 
+            <br>
+            <br>
+            The chart above features Women's Earnings as a Percentage of Men's Earnings by Race
+                and Hispanic Origin from 2010 to 2021. (Table P-40). Surprisingly, our findings contradict 
+                popular literature that Black and Hispanic women of color are likely to have larger wage 
+                gaps. Instead, the dataset show that Black and Hispanic women’s earnings as a percentage of 
+                men’s continue to be the highest for this period of time, while Asian and white women’s 
+                earnings are lower in comparison. The data presented in the chart challenges stereotypes 
+                and emphasizes the need for a more nuanced understanding of the gender wage gap.
+            </p>
+        </div>
+        
+    </section>
 
  <!-- Occupational Segregation section -->
-      
     <section id="occ" class="section">
         <div class="container text-center">
             <h6 class="subtitle">Research Insights </h6>
             <h6 class="section-title mb-4">Occupational Segregation</h6>
-            <p class="mb-5 pb-4"> An explanation for the gender wage gap is: <br> Differences in median income of men and women.</p>
+            <p class="mb-5 pb-4" style="text-align: left;"> 
+                Occupational segregation, or the concentration of men and women in different occupations and industries,
+                is a key factor contributing to the gender wage gap. Occupational segregation is defined as the phenomenon where one demographic group is overrepresented or underrepresented in a certain job category <a href="https://www.americanprogress.org/article/occupational-segregation-in-america/#:~:text=In%20predominantly%20female%20roles%2C%20occupational,genders%2C%20races%2C%20and%20ethnicities.&text=Highly%20gender%2Dsegregated%20labor%20markets,the%20earnings%20of%20Black%20women.">
+                (Occupational Segregation in America, 2023)</a>.
+                Women are still highly concentrated in relatively few, predominately female occupations with lower pay.
+                 <br>
+                 <br>
+                Occupational segregation has a direct impact on the gender wage gap because it limits 
+                women's opportunities for higher earnings and career advancement. When women are concentrated 
+                in lower-paying jobs, they are less likely to earn salaries comparable to men in higher-paying
+                 jobs. This limits women's opportunities for advancement and professional development, which can further exacerbate the wage gap.
+                </p>
+            <div id="occ" class="piecharts">
+            <canvas id="prof"></canvas>
+            <canvas id="educational"></canvas>
+            <canvas id="healthcare"></canvas>
+            <canvas id="office"></canvas>
+            <canvas id="construction"></canvas>
+            </div>
+            <p style="text-align: left;"> 
+                The data from the above charts are derrived from Table 2 of <a href="https://www.bls.gov/opub/reports/womens-earnings/2020/home.htm"> CPS women's earnings data from US Bureau of Labour Statistics (BLS)</a> in 2020. 
+                Horizontal segregation occurs when women are concentrated in lower paying occupations/fields with worse working 
+                conditions and fewer chances for advancement. It can be observed that women are overrepresented in fields such as education (73%), healthcare (74%), 
+                and administrative occupations (72%), as seen by the overwhelming proportion of women compared to men in these sectors. 
+                Men overwhelmingly tend to fall into manual (95%) fields.
+                <br>
+                <br>
+                Additionally, vertical segregation occurs when women are concentrated in lower level, lower paying roles 
+                in the same occupations/field. For instance, within the healthcare sector, 
+                women are more likely to work in lower-paying positions such as nursing and 
+                support staff, while men are more likely to hold higher-paying positions such as 
+                physicians and executives. 
+                <br>
+                <br>
+                On a positive note, we can observe that within professional occupations, there is a larger proportion of females (55%) 
+                than males (45%). This occupational category is made up of several distinct job groupings for 
+                specialized fields, such as computer science and math, architecture and engineering, 
+                law, education, and healthcare. As mentioned by Autor & Wasserman in their book, “Wayward Sons”, 
+                men’s position in the labour market is deteriorating due to skill-based 
+                technological change. The authors suggest that technology and women's skills are viewed as complementary, 
+                whereas technology and men's skills are viewed as substitutes. This has led to women upskilling while 
+                men are downskilling, which in turn has contributed to a higher representation of women in 
+                professional occupations.
+            </p>
+        </div>
         
-        </div>
-        <br>
-        <div id="chart-container" style="padding-left: 100px; height:50vh; width: 90vw;">
-            <canvas id="occuseg"></canvas>
-        </div>
     </section>
 <!-- End of OS section -->  
 
@@ -132,13 +224,43 @@
     <div class="container text-center">
         <h6 class="subtitle">Research Insights </h6>
         <h6 class="section-title mb-4">Motherhood Penalty</h6>
-        <p class="mb-5 pb-4"> An explanation for the gender wage gap is: <br> Differences in median income of men and women.</p>
     
+        <p class="mb-5 pb-4" style="text-align:left;"> 
+            The motherhood penalty is another factor that contributes to the gender wage gap. 
+            Estimates suggest that motherhood may account for much of the current shortfall 
+            in the earnings potential of women overall. Women who take breaks in their careers to care for their children, 
+            sacrifice a portion of their earnings. This penalty is greater for mothers compared to fathers.
+            <br>
+            <br>
+            This phenomenon can be credited to employers assuming that mothers are less
+            committed to their jobs or less productive than their childless counterparts, even if this assumption
+            is unfounded. Additionally, women with children may face additional responsibilities and constraints
+            that make it difficult to balance work and family, such as caregiving duties and limited access to
+            affordable childcare.
+            <br>
+            <br>
+            The motherhood penalty can have long-term consequences for women's earnings and career trajectories. 
+            Women who take time off or work reduced hours to care for their children may miss out on opportunities
+            for advancement and professional development, which can limit their earning potential over time. 
+            Additionally, the motherhood penalty can contribute to gender disparities in retirement savings and 
+            social security benefits, which can have significant implications for women's financial security in later 
+            life.
+        </p>
+        <br>
+        <div>
+            <canvas id="penalty" class="chart-container"></canvas>
+            
+        </div>
+        <p style="text-align:left;"> 
+            According to the above data, retrieved from <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">Pew Research Center's analysis of the Current Population Survey outgoing
+                rotation group files (IPUMS)</a>, the effect of motherhood is most significant amongst women aged 25 to 34 years as this is 
+                the age group that they are most likely to have children. In 2022, mothers aged 25 to 34 earned 85% as much as fathers that age, while women without children in the same 
+                age group, earned 97% as much as fathers. Women aged 35-44 earned roughly the same (80%), with and without children.
+
+        </p>
     </div>
     <br>
-    <div id="chart-container" style="padding-left: 650px; height:60vh; width: 70vw;">
-        <canvas id="penalty"></canvas>
-    </div>
+   
 </section>
 <!--End of penalty section-->
 
@@ -148,14 +270,27 @@
         <div class="container mt-5">
             <div class="row text-center text-md-left">
                 <div class="col-md-3">
-                    <img src="assets/imgs/genderinequal.jpeg" alt="" class="img-thumbnail mb-4">
+                    <img src="assets/imgs/genderinequal.jpeg" class="img-thumbnail mb-4">
                 </div>
 
                 <div class="pl-md-4 col-md-9">
-                    <h4 class="title"> Conclusion </h4>
-                    <p> Summary
+                    <h6 class="section-title mb-4"> Conclusion: A note on Gender Discrimination</h6>
+                    <p> The gender wage gap is a complex issue that is influenced by many factors, 
+                        including occupational segregation and the motherhood penalty. Both occupational segregation
+                        and motherhood penalty are rooted in gender discrimination and stereotypes that dictates and decides 
+                        what a women's role in society should be. These factors interact in complex ways to create disparities
+                        in earnings and opportunities between men and women, which can have significant implications for 
+                        women's financial security and well-being.
+                        <br>
+                        <br>
+                        To address the gender wage gap and promote greater equity, greater efforts in education are needed to 
+                        address these biases and stereotypes. Policies and programs are needed to support working parents, including paid parental leave, affordable childcare, and flexible work 
+                        arrangements. By addressing these factors, we can help to create a more just and equitable society for all. 
+                
+
+
                     </p>
-                    <h4> References </h4>
+                    
                 </div>
                 </div>
             </div>
@@ -163,33 +298,59 @@
     </section>
 
 
-    <!-- Contact Section -->
+    <!-- References & links -->
     <section id="contact" class="position-relative section">
         <div class="container text-center">
-            <h6 class="section-title mb-4">Leave me feedback!</h6>
-            <p class="mb-5 pb-4">I would love to hear your thoughts on my data story or any thoughts you might have on the topic itself.
-                <br> Feel free to leave me feedback on my data visualisation too! </p>
-
             <div class="contact text-left">
                 <div class="form">
-                    <h6 class="section-title mb-4">Feedback & Thoughts: </h6>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
-                    </form>
+                    <h6 class="section-title mb-4">Datasets</h6>
+                    <p> General & Education (Factors) Chart:
+                        <br>
+                    US Census Bureau. (2022, September 15). Table P-2 & P-16.
+                    Historical Income Tables: People. Census.gov.
+                    <a href="https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-people.html ">https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-people.html </a>
+                    <br>
+                    <br>
+                    Race (Factors) Chart: 
+                    <br>
+                    US Census Bureau. (2022, September 15). Table P-40.
+                    Historical Income Tables: People. Census.gov.
+                    <a href="https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-people.html">https://www.census.gov/data/tables/time-series/demo/income-poverty/historical-income-people.html </a>
+                    <br>
+                    <br>
+                    Occupation Segregation Chart:
+                    <br>
+                    U.S. Bureau of Labor Statistics. (2021, September). Highlights of women’s earnings in 2020: BLS Reports. 
+                    Bls.gov. Table 2.  <a href="https://www.bls.gov/opub/reports/womens-earnings/2020/home.htm">https://www.bls.gov/opub/reports/womens-earnings/2020/home.htm</a>
+                    <br>
+                    <br>
+                    ‌Motherhood Penalty Chart:
+                    <br>
+                    Kochhar, R. (2023, March). The Enduring Grip of the Gender Pay Gap. 
+                    Pew Research Center’s Social & Demographic Trends Project; 
+                    Pew Research Center’s Social & Demographic Trends Project. 
+                    <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap">https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/ </a>
+                    </p>
+                
+                </p>
+‌
+                    
                 </div>
                 <div class="contact-infos">
                 
                     <div class="item">
-                        <i class="ti-email"></i>
+                    
                         <div class="mb-0">
-                            <h5>Contact me</h5>
-                            <p>gwenteoy.c@gmail.com</p>
+                            <h5>Weekly Progress</h5>
+                            <a href="https://drive.google.com/file/d/1uNAoVJ6wNHQc2C1bAUhgSoWx2Oasgi2U/view?usp=sharing"> Week 9 Diary Entry </a>
+                            <br>
+			                <a href="https://drive.google.com/file/d/1ik7Usnyx7ssqffXwakgBiYCs0EkD0bPF/view?usp=sharing"> Week 10 Diary Entry </a> 
+                            <br>
+                            <a href= "https://drive.google.com/file/d/1F5o1LTvN6tVPhCgfrzHr41v2WrAgrJXK/view?usp=sharing"> Week 11 Diary Entry </a> 
+                            <br>
+                            <a href = "https://drive.google.com/file/d/1ojLA9HZifN4P4zjLy5xvshJTPSs2Ed5b/view?usp=sharing"> Week 12 Diary Entry </a>
+                            
+                            
                         </div>
                     </div>
                 </div>                  
@@ -206,21 +367,6 @@
                 <div class="col-sm-6">
                     <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
                 </div>
-                <div class="col-sm-6">
-                    <a href="https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/7208e7a06f26d7d8bc6340f4536ee6ade71a57ce/NM2207%20Week%209%20Submission.docx"> Week 9 Diary Entry <a>
-                        <br>
-			<a href="https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/7208e7a06f26d7d8bc6340f4536ee6ade71a57ce/NM2207%20Week%2010%20submission.docx">  Week 10 Diary Entry <a> <br>
-                <a href= "https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/6336cc1c7404bcdc2dea4c59b3331072541002b4/Week%2011%20Diary%20Entry.docx"> Week 11 Diary Entry </a> 
-		<br>
-		<a href="https://github.com/teoyenchihgwen-nm2207/teoyenchihgwen-nm2207.github.io/blob/f7a4aa6e92ab3d96c591f61c3326a24598392bee/Week%2012%20Diary%20Entry.pdf"> Week 12 Diary Entry </a>
-                    <!--<div class="socials">
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-facebook"></i></a>
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-google"></i></a>
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-github"></i></a>
-                        <a class="social-item" href="javascript:void(0)"><i class="ti-twitter"></i></a>
-                    </div>
-                </div>-->
-            </div>
         </div>
     </footer> 
     <!-- End of page footer -->
@@ -234,6 +380,10 @@
     <!-- steller js -->
     <script src="assets/js/steller.js"></script>
     <!-- main js-->
+
+    <script src='https://cdn.plot.ly/plotly-2.18.2.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
     <script src="main.js"></script>
+   
 </body>
 </html>
